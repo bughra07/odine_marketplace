@@ -29,7 +29,7 @@ public class Job {
     @Column(name = "created_date", nullable = false, updatable = false)
     private LocalDateTime createdDate;
 
-    /** Varsayılan olarak IN_PROGRESS başlar */
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private JobStatus status = JobStatus.IN_PROGRESS;
@@ -37,7 +37,6 @@ public class Job {
     @Column(length = 1000)
     private String description;
 
-    /* ---------- Yapıcılar ---------- */
 
     public Job() { }   // JPA için zorunlu
 
@@ -48,7 +47,6 @@ public class Job {
         this.status = JobStatus.IN_PROGRESS;
     }
 
-    /* ---------- Getter / Setter'lar ---------- */
 
     public Long getId() { return id; }
 

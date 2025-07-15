@@ -15,15 +15,13 @@ public class Comment {
     @Id @GeneratedValue
     private Long id;
 
-    /* --- relations --- */
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "job_id", nullable = false)
     private Job job;
 
-    /* --- fields --- */
     private String commenterName;
 
-    @CreationTimestamp         // otomatik setlenir
+    @CreationTimestamp
     private LocalDateTime createdDate;
 
     @Column(columnDefinition = "text")

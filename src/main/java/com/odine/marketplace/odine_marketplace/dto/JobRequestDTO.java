@@ -8,5 +8,5 @@ import jakarta.validation.constraints.NotNull;
 public record JobRequestDTO(
         @NotNull Long freelancerId,
         @NotBlank String description,
-        JobStatus status          // PATCH çağrısında opsiyonel şekilde gelebilir
+        JobStatus status
 ) {}

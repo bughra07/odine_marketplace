@@ -1,4 +1,3 @@
-// repository/CommentRepository.java
 package com.odine.marketplace.odine_marketplace.repository;
 
 import com.odine.marketplace.odine_marketplace.model.Comment;

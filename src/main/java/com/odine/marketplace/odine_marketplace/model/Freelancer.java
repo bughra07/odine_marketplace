@@ -9,7 +9,6 @@ import java.util.Objects;
 @Table(name = "freelancers")
 public class Freelancer {
 
-    /* ---------- Alanlar ---------- */
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,13 +22,11 @@ public class Freelancer {
     @Enumerated(EnumType.STRING)
     private FreelancerType type;
 
-    /* Tasarımcı özel alanları */
     private String portfolioUrl;
 
     @ElementCollection
     private List<String> designTools = new ArrayList<>();
 
-    /* Geliştirici özel alanları */
     @ElementCollection
     private List<String> languages = new ArrayList<>();
 
@@ -38,20 +35,9 @@ public class Freelancer {
 
     private int evaluationScore;   // 1‒10
 
-    /* ---------- 1) JPA ve mapper’lar için boş kurucu ---------- */
-
-    /**
-     * Parametresiz kurucu *zorunlu*:
-     * - JPA / Hibernate entity'yi yansıtma (reflection) ile
-     *   oluştururken buna ihtiyaç duyar.
-     * - Mapper'larda new Freelancer() kullanmak için de gerekir.
-     * Protected yaparak dış kodun yanlışlıkla kullanmasını
-     * engellerken, JPA'nın erişimine izin vermiş oluyoruz.
-     */
     public Freelancer() {
     }
 
-    /* ---------- 2) Parametreli kurucu ---------- */
 
    /* public Freelancer(String name, String email, String phone, String city,
                       FreelancerType type,

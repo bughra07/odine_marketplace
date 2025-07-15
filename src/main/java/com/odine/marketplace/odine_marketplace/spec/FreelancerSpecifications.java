@@ -1,7 +1,5 @@
 package com.odine.marketplace.odine_marketplace.spec;
 
-
-
 import com.odine.marketplace.odine_marketplace.model.*;
 import org.springframework.data.jpa.domain.Specification;
 import java.util.Locale;

@@ -1,4 +1,3 @@
-// controller/CommentController.java
 package com.odine.marketplace.odine_marketplace.controller;
 
 import com.odine.marketplace.odine_marketplace.dto.*;

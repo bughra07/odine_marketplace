@@ -13,11 +13,10 @@ public record FreelancerRequestDTO(
         @NotBlank String city,
         @NotNull  FreelancerType type,
 
-        /* Designer */
         String portfolioUrl,
         List<String> designTools,
 
-        /* Developer */
+
         List<String> languages,
         List<String> specialties
 ) {}

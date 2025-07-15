@@ -1,6 +1,4 @@
 package com.odine.marketplace.odine_marketplace.service;
-
-
 import com.odine.marketplace.odine_marketplace.dto.*;
 import com.odine.marketplace.odine_marketplace.model.Freelancer;
 

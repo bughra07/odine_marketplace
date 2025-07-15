@@ -1,4 +1,3 @@
-// dto/CommentRequestDTO.java
 package com.odine.marketplace.odine_marketplace.dto;
 
 import jakarta.validation.constraints.NotBlank;

@@ -29,7 +29,6 @@ public class JobServiceImpl implements JobService {
                 .orElseThrow(() -> new IllegalArgumentException("Freelancer not found"));
 
         Job job = new Job(f, dto.description());
-        // status null ⇒ IN_PROGRESS, ama create sırasında override etmek istersen:
         if (dto.status() != null) job.setStatus(dto.status());
 
         return JobMapper.toDto(repo.save(job));
@@ -59,6 +58,6 @@ public class JobServiceImpl implements JobService {
         if (dto.description() != null && !dto.description().isBlank())
             job.setDescription(dto.description());
 
-        return JobMapper.toDto(job);    // dirty-checking ile otomatik flush
+        return JobMapper.toDto(job);
     }
 }

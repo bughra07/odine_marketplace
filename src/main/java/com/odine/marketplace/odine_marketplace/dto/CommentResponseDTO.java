@@ -1,4 +1,3 @@
-// dto/CommentResponseDTO.java
 package com.odine.marketplace.odine_marketplace.dto;
 
 import java.time.LocalDateTime;

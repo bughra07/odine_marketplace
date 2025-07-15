@@ -1,4 +1,3 @@
-// mapper/CommentMapper.java
 package com.odine.marketplace.odine_marketplace.mapper;
 
 import com.odine.marketplace.odine_marketplace.dto.*;

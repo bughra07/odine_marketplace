@@ -1,4 +1,3 @@
-// service/impl/CommentServiceImpl.java
 package com.odine.marketplace.odine_marketplace.service.impl;
 
 import com.odine.marketplace.odine_marketplace.dto.*;
@@ -23,10 +22,10 @@ public class CommentServiceImpl implements CommentService {
 
     @Override @Transactional
     public CommentResponseDTO create(CommentRequestDTO dto) {
-        //createdDate create edildikten sonra null dönüyor.
         Job job = jobRepo.findById(dto.jobId())
                 .orElseThrow(() -> new IllegalArgumentException("Job not found"));
-        Comment saved = commentRepo.save(mapper.toEntity(dto, job));
+        Comment saved = commentRepo.saveAndFlush(mapper.toEntity(dto, job));
+
         return mapper.toDto(saved);
     }
 
@@ -41,7 +40,6 @@ public class CommentServiceImpl implements CommentService {
     public CommentResponseDTO update(Long id, CommentRequestDTO dto) {
         Comment c = commentRepo.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Comment not found"));
-        // sadece yorum metni güncellensin; job & commenter değişmiyor
         c.setCommentText(dto.commentText());
         return mapper.toDto(commentRepo.save(c));
     }

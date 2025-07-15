@@ -7,6 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface JobRepository extends JpaRepository<Job, Long> {
 
-    /** Belirli bir freelancer’ın işleri (paged). */
     Page<Job> findByFreelancer_Id(Long freelancerId, Pageable pageable);
 }
