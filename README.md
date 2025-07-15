@@ -186,3 +186,100 @@ Phone: +90 532 363 3607
 =======
 
 >>>>>>> origin/main
+
+
+## API Endpoints
+
+### Freelancers
+
+#### Create Freelancer
+
+```
+POST /api/freelancers
+```
+
+**Request Body**
+
+```json
+{
+  "name": "Mustafa Dev",
+  "email": "alice@example.com",
+  "phone": "+905551111111",
+  "city": "Mugla",
+  "type": "DEVELOPER",
+  "languages": ["Java", "Go"],
+  "specialties": ["Frontend", "DevOps", "Backend"]
+}
+```
+
+---
+
+### Jobs
+
+#### Create Job
+
+```
+POST /api/jobs
+```
+
+**Request Body**
+
+```json
+{
+  "freelancerId": 1,
+  "description": "Landing page revamp"
+}
+```
+
+#### Update Job
+
+```
+PATCH /api/jobs/{id}
+```
+
+**Request Body**
+
+```json
+{
+  "status": "FINISHED",
+  "description": "QA qweqeewq testleri başladı"
+}
+```
+
+---
+
+### Comments
+
+#### Create Comment
+
+```
+POST /api/comments
+```
+
+**Request Body**
+
+```json
+{
+  "jobId": 4,
+  "commenterName": "Ahmettt",
+  "commentText": "Harika iş!"
+}
+```
+
+#### Update Comment
+
+```
+PATCH /api/comments/{id}
+```
+
+**Request Body**
+
+```json
+{
+  "jobId": 1,
+  "commenterName": "Burak",
+  "commentText": "Revize: Teslim süperdi!"
+}
+```
+
+---
