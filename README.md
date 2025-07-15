@@ -45,6 +45,7 @@
    docker-compose up -d
    ```
    This will:
+<<<<<<< HEAD
     - Launch PostgreSQL on `localhost:5432`
     - Create a database named `odine_db`
     - Create a user `odine` with password `secret`
@@ -60,6 +61,23 @@
       ```bash
       mvn spring-boot:run
       ```
+=======
+   - Launch PostgreSQL on `localhost:5432`
+   - Create a database named `odine_db`
+   - Create a user `odine` with password `secret`
+
+4. **Open in IntelliJ**
+   1. In IntelliJ: **File > Open…**, select the project folder.
+   2. When prompted, **Import Maven Projects** and enable auto‑import.
+   3. Set **Project SDK** to JDK 17.
+
+5. **Run the application**
+   - **In IntelliJ**: Right‑click `OdineMarketplaceApplication.java` → **Run 'OdineMarketplaceApplication'**
+   - **From the terminal**:
+     ```bash
+     mvn spring-boot:run
+     ```
+>>>>>>> origin/main
 
 6. **Health check**
    Open your browser and visit:
@@ -164,3 +182,7 @@ mvn test
 **Muhammed Buğrahan Terlik**  
 Email: muhammedbugrahan.terlik@std.yeditepe.edu.tr  
 Phone: +90 532 363 3607
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
